@@ -1,0 +1,20 @@
+<?php 
+ if (session_status() === PHP_SESSION_NONE){ 
+    session_start(); 
+ }
+ ?>
+ 
+  <?php  
+ //fetch.php  
+include('assets/db_connect.php');
+
+ if(isset($_POST["id"]))  
+ {  
+ 	  $id = $_POST['id'];
+
+      $query = "SELECT * FROM enrolls_to WHERE id = '$id'";  
+      $result = mysqli_query($con, $query);  
+      $row = mysqli_fetch_array($result);  
+      echo json_encode($row);  
+ }  
+ ?>	

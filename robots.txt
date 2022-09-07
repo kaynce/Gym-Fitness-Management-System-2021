@@ -1,0 +1,8 @@
+Sitemap: https://hmgfitnesscenter.com/sitemap/sitemaps_production.xml
+
+User-agent: *
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /create-new-password.php
+Disallow: /verify-your-email.php
+
